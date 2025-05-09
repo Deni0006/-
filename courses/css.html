@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Курс CSS | Learn-IT</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../courses.css/css.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>CSS: Стилизация HTML</h1>
+    <p>Базовый курс по CSS для начинающих</p>
+    <nav>
+      <ul>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="js.html">JavaScript</a></li>
+        <li><a href="python.html">Python</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section>
+    <h2>Что такое CSS?</h2>
+    <p><strong>CSS</strong> (Cascading Style Sheets — каскадные таблицы стилей) — это язык, с помощью которого задаётся внешний вид HTML-страниц: цвета, отступы, размеры, шрифты и т.д.</p>
+  </section>
+
+  <section>
+    <h2>Как подключать CSS к HTML?</h2>
+    <ol>
+      <li><strong>Встроенный стиль (inline):</strong> в самом теге
+        <div class="example">
+          <span>1 </span>&lt;p style="color: red;"&gt;Красный текст&lt;/p&gt;
+        </div>
+      </li>
+      <li><strong>Внутренний стиль (внутри &lt;style&gt;):</strong> в &lt;head&gt;
+        <div class="example">
+          <span>1 </span>&lt;style&gt;
+          <span>2 </span>&nbsp;&nbsp;p { color: blue; }
+          <span>3 </span>&lt;/style&gt;
+        </div>
+      </li>
+      <li><strong>Внешний файл:</strong> подключается через <code>&lt;link&gt;</code>
+        <div class="example">
+          <span>1 </span>&lt;link rel="stylesheet" href="style.css"&gt;
+        </div>
+      </li>
+    </ol>
+
+    <div class="tip">
+      📌 <strong>Лучше использовать внешний CSS-файл</strong> — так код будет аккуратнее и удобнее в работе.
+    </div>
+  </section>
+
+  <section>
+    <h2>Основные свойства CSS</h2>
+    <table>
+      <tr>
+        <th>Свойство</th>
+        <th>Описание</th>
+        <th>Пример</th>
+      </tr>
+      <tr>
+        <td>color</td>
+        <td>Цвет текста</td>
+        <td>color: red;</td>
+      </tr>
+      <tr>
+        <td>background-color</td>
+        <td>Цвет фона</td>
+        <td>background-color: yellow;</td>
+      </tr>
+      <tr>
+        <td>font-size</td>
+        <td>Размер шрифта</td>
+        <td>font-size: 18px;</td>
+      </tr>
+      <tr>
+        <td>margin</td>
+        <td>Внешние отступы</td>
+        <td>margin: 10px;</td>
+      </tr>
+      <tr>
+        <td>padding</td>
+        <td>Внутренние отступы</td>
+        <td>padding: 15px;</td>
+      </tr>
+      <tr>
+        <td>border</td>
+        <td>Граница вокруг элемента</td>
+        <td>border: 1px solid black;</td>
+      </tr>
+      <tr>
+        <td>text-align</td>
+        <td>Выравнивание текста</td>
+        <td>text-align: center;</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Пример стилизации блока</h2>
+    <div class="example">
+      <span>1 </span>&lt;style&gt;
+      <span>2 </span>&nbsp;&nbsp;.card {
+      <span>3 </span>&nbsp;&nbsp;&nbsp;&nbsp;background-color: #e0f7fa;
+      <span>4 </span>&nbsp;&nbsp;&nbsp;&nbsp;padding: 20px;
+      <span>5 </span>&nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid #00796b;
+      <span>6 </span>&nbsp;&nbsp;&nbsp;&nbsp;border-radius: 10px;
+      <span>7 </span>&nbsp;&nbsp;&nbsp;&nbsp;color: #004d40;
+      <span>8 </span>&nbsp;&nbsp;}&lt;/style&gt;
+      <span>9 </span>
+      <span>10 </span>&lt;div class="card"&gt;Пример красивого блока&lt;/div&gt;
+    </div>
+
+    <div class="tip">
+      🎨 <strong>Совет:</strong> Старайся использовать классы (например, <code>.card</code>) для стилизации, а не стили прямо в HTML.
+    </div>
+  </section>
+  <section>
+    <h2>Изменение ширины и высоты элементов</h2>
+    <p>С помощью свойств <code>width</code> и <code>height</code> можно задавать размеры элементов. Это полезно, если ты хочешь, чтобы блок был, например, точно 300 пикселей в ширину или занимал половину экрана.</p>
+
+    <table>
+      <tr>
+        <th>Свойство</th>
+        <th>Описание</th>
+        <th>Пример</th>
+      </tr>
+      <tr>
+        <td><code>width</code></td>
+        <td>Ширина элемента (можно в px, %, vw)</td>
+        <td>width: 300px;</td>
+      </tr>
+      <tr>
+        <td><code>height</code></td>
+        <td>Высота элемента</td>
+        <td>height: 200px;</td>
+      </tr>
+      <tr>
+        <td><code>max-width</code></td>
+        <td>Максимальная ширина — элемент не будет шире этого значения</td>
+        <td>max-width: 100%;</td>
+      </tr>
+      <tr>
+        <td><code>min-height</code></td>
+        <td>Минимальная высота</td>
+        <td>min-height: 150px;</td>
+      </tr>
+    </table>
+
+    <div class="example">
+      <span>1 </span>&lt;style&gt;
+      <span>2 </span>&nbsp;&nbsp;.box {
+      <span>3 </span>&nbsp;&nbsp;&nbsp;&nbsp;width: 300px;
+      <span>4 </span>&nbsp;&nbsp;&nbsp;&nbsp;height: 200px;
+      <span>5 </span>&nbsp;&nbsp;&nbsp;&nbsp;background-color: lightcoral;
+      <span>6 </span>&nbsp;&nbsp;}&lt;/style&gt;
+      <span>7 </span>
+      <span>8 </span>&lt;div class="box"&gt;Я — блок 300x200&lt;/div&gt;
+    </div>
+
+    <div class="tip">
+      📏 <strong>Единицы измерения:</strong><br>
+      <ul>
+        <li><code>px</code> — пиксели (точное значение)</li>
+        <li><code>%</code> — проценты от родителя</li>
+        <li><code>vw / vh</code> — проценты от ширины/высоты окна браузера</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <h2>Layout: Flex, Grid и позиционирование</h2>
+
+    <h3>🧭 Что такое <code>display: flex</code>?</h3>
+    <p><strong>Flexbox</strong> (гибкая модель) позволяет удобно выравнивать элементы в строку или столбец, управлять расстоянием между ними и центровкой.</p>
+
+    <div class="example">
+      <span>1 </span>&lt;style&gt;
+      <span>2 </span>&nbsp;&nbsp;.container { display: flex; }
+      <span>3 </span>&nbsp;&nbsp;.item { padding: 10px; background: lightblue; margin: 5px; }
+      <span>4 </span>&lt;/style&gt;
+      <span>5 </span>
+      <span>6 </span>&lt;div class="container"&gt;
+      <span>7 </span>&nbsp;&nbsp;&lt;div class="item"&gt;1&lt;/div&gt;
+      <span>8 </span>&nbsp;&nbsp;&lt;div class="item"&gt;2&lt;/div&gt;
+      <span>9 </span>&nbsp;&nbsp;&lt;div class="item"&gt;3&lt;/div&gt;
+      <span>10 </span>&lt;/div&gt;
+    </div>
+
+    <div class="tip">
+      🎯 <strong>Полезно:</strong> Flex позволяет выравнивать элементы по центру с помощью <code>justify-content</code> и <code>align-items</code>.
+    </div>
+
+    <h3>📐 Что такое <code>display: grid</code>?</h3>
+    <p><strong>Grid</strong> — это система координат, позволяющая размещать элементы в виде сетки (таблицы). Очень удобно для сложной вёрстки.</p>
+
+    <div class="example">
+      <span>1 </span>&lt;style&gt;
+      <span>2 </span>&nbsp;&nbsp;.grid {
+      <span>3 </span>&nbsp;&nbsp;&nbsp;&nbsp;display: grid;
+      <span>4 </span>&nbsp;&nbsp;&nbsp;&nbsp;grid-template-columns: 1fr 1fr 1fr;
+      <span>5 </span>&nbsp;&nbsp;&nbsp;&nbsp;gap: 10px;
+      <span>6 </span>&nbsp;&nbsp;}
+      <span>7 </span>&nbsp;&nbsp;.cell { background: lightgreen; padding: 10px; }
+      <span>8 </span>&lt;/style&gt;
+      <span>9 </span>
+      <span>10 </span>&lt;div class="grid"&gt;
+      <span>11 </span>&nbsp;&nbsp;&lt;div class="cell"&gt;A&lt;/div&gt;
+      <span>12 </span>&nbsp;&nbsp;&lt;div class="cell"&gt;B&lt;/div&gt;
+      <span>13 </span>&nbsp;&nbsp;&lt;div class="cell"&gt;C&lt;/div&gt;
+      <span>14 </span>&lt;/div&gt;
+    </div>
+
+    <div class="tip">
+      💡 <strong>Grid</strong> идеально подходит, когда тебе нужно задать сетку с колонками и строками.
+    </div>
+
+    <h3>📍 Что такое позиционирование (position)?</h3>
+    <p>Свойство <code>position</code> позволяет точно указывать, где должен находиться элемент на странице.</p>
+
+    <table>
+      <tr>
+        <th>Тип</th>
+        <th>Описание</th>
+      </tr>
+      <tr>
+        <td><code>static</code></td>
+        <td>По умолчанию. Элемент следует в обычном потоке документа.</td>
+      </tr>
+      <tr>
+        <td><code>relative</code></td>
+        <td>Элемент остаётся на месте, но можно сместить его с помощью <code>top</code>, <code>left</code> и т.д.</td>
+      </tr>
+      <tr>
+        <td><code>absolute</code></td>
+        <td>Абсолютное позиционирование. Элемент вырывается из потока и позиционируется относительно ближайшего <strong>относительного</strong> родителя.</td>
+      </tr>
+      <tr>
+        <td><code>fixed</code></td>
+        <td>Похож на <code>absolute</code>, но позиционируется относительно окна браузера и остаётся на месте при прокрутке.</td>
+      </tr>
+      <tr>
+        <td><code>sticky</code></td>
+        <td>«Липкий» элемент: ведёт себя как обычный, пока не дойдёт до заданной позиции — потом «прилипает».</td>
+      </tr>
+    </table>
+
+    <div class="example">
+      <span>1 </span>&lt;div style="position: absolute; top: 50px; left: 100px;"&gt;Я — абсолютно позиционирован&lt;/div&gt;
+    </div>
+
+    <div class="tip">
+      📌 <strong>Важно:</strong> Для <code>absolute</code> родительский блок должен иметь <code>position: relative;</code>, иначе элемент будет отталкиваться от <code>&lt;body&gt;</code>.
+    </div>
+  </section>
+  <a class="back-link" href="../index.html">← Назад на главную</a>
+</main>
+
+<footer>
+  <p>© 2025 Learn-IT | CSS курс для начинающих</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Курс JavaScript | Learn-IT</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../courses.css/js.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>JavaScript: Основы</h1>
+    <p>Учимся делать сайт "живым"</p>
+    <nav>
+      <ul>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="js.html">JavaScript</a></li>
+        <li><a href="python.html">Python</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section>
+    <h2>Что такое JavaScript?</h2>
+    <p><strong>JavaScript</strong> — это язык программирования, который позволяет делать страницы интерактивными: обрабатывать клики, вводы, анимацию и даже игры!</p>
+  </section>
+
+  <section>
+    <h2>Как подключать JavaScript?</h2>
+    <ol>
+      <li><strong>Встроенный скрипт:</strong>
+        <div class="example">
+          <span>1 </span>&lt;script&gt;
+          <span>2 </span>&nbsp;&nbsp;alert("Привет, JS!");
+          <span>3 </span>&lt;/script&gt;
+        </div>
+      </li>
+      <li><strong>Внешний файл:</strong>
+        <div class="example">
+          <span>1 </span>&lt;script src="script.js"&gt;&lt;/script&gt;
+        </div>
+      </li>
+    </ol>
+    <div class="tip">
+      📌 <strong>Совет:</strong> Лучше подключать внешний JS-файл в конце <code>&lt;body&gt;</code>, чтобы скрипт не мешал загрузке страницы.
+    </div>
+  </section>
+
+  <section>
+    <h2>Основы синтаксиса</h2>
+    <table>
+      <tr>
+        <th>Концепт</th>
+        <th>Пример</th>
+      </tr>
+      <tr>
+        <td>Переменная</td>
+        <td>let name = "Андрей";</td>
+      </tr>
+      <tr>
+        <td>Число</td>
+        <td>let age = 25;</td>
+      </tr>
+      <tr>
+        <td>Булево значение</td>
+        <td>let isStudent = true;</td>
+      </tr>
+      <tr>
+        <td>Вывод в консоль</td>
+        <td>console.log("Привет!");</td>
+      </tr>
+      <tr>
+        <td>Сложение</td>
+        <td>let sum = 5 + 3;</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Взаимодействие с HTML</h2>
+    <p>JavaScript может менять содержимое и стиль элементов на странице.</p>
+    <div class="example">
+      <span>1 </span>&lt;button onclick="changeText()"&gt;Нажми меня&lt;/button&gt;
+      <span>2 </span>&lt;p id="text"&gt;Исходный текст&lt;/p&gt;
+      <span>3 </span>
+      <span>4 </span>&lt;script&gt;
+      <span>5 </span>&nbsp;&nbsp;function changeText() {
+      <span>6 </span>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("text").innerText = "Текст изменён!";
+      <span>7 </span>&nbsp;&nbsp;}
+      <span>8 </span>&lt;/script&gt;
+    </div>
+  </section>
+
+  <section>
+    <h2>Простые события</h2>
+    <p>JavaScript умеет "слушать", что делает пользователь (например, нажатия, движения мыши и т.п.)</p>
+    <div class="example">
+      <span>1 </span>&lt;input type="text" id="nameInput" placeholder="Введи имя"&gt;
+      <span>2 </span>&lt;button onclick="sayHello()"&gt;Поздороваться&lt;/button&gt;
+      <span>3 </span>
+      <span>4 </span>&lt;script&gt;
+      <span>5 </span>&nbsp;&nbsp;function sayHello() {
+      <span>6 </span>&nbsp;&nbsp;&nbsp;&nbsp;let name = document.getElementById("nameInput").value;
+      <span>7 </span>&nbsp;&nbsp;&nbsp;&nbsp;alert("Привет, " + name + "!");
+      <span>8 </span>&nbsp;&nbsp;}
+      <span>9 </span>&lt;/script&gt;
+    </div>
+  </section>
+  <section>
+    <h2>Переменные, условия и циклы</h2>
+
+    <h3>📦 Переменные</h3>
+    <p>Переменные — это ячейки, в которых хранятся данные (текст, числа, логика и т.п.).</p>
+    <div class="example">
+      <span>1 </span>let name = "Андрей";
+      <span>2 </span>const year = 2025;
+      <span>3 </span>var oldStyle = "не рекомендуется";
+    </div>
+    <div class="tip">
+      🧠 <strong>let</strong> — современный способ объявления переменных.  
+      <strong>const</strong> — если значение не будет меняться.  
+      <strong>var</strong> — устарел, но ещё используется.
+    </div>
+
+    <h3>🔀 Условия (if, else)</h3>
+    <p>Условия позволяют выполнять код только если выполняется какое-то правило.</p>
+    <div class="example">
+      <span>1 </span>let age = 18;
+      <span>2 </span>if (age &gt;= 18) {
+      <span>3 </span>&nbsp;&nbsp;alert("Добро пожаловать!");
+      <span>4 </span>} else {
+      <span>5 </span>&nbsp;&nbsp;alert("Вход запрещён");
+      <span>6 </span>}
+    </div>
+
+    <h3>🔁 Циклы</h3>
+    <p>Циклы позволяют повторять действия много раз.</p>
+
+    <h4>📌 for</h4>
+    <div class="example">
+      <span>1 </span>for (let i = 0; i &lt; 5; i++) {
+      <span>2 </span>&nbsp;&nbsp;console.log("Шаг " + i);
+      <span>3 </span>}
+    </div>
+
+    <h4>📌 while</h4>
+    <div class="example">
+      <span>1 </span>let count = 3;
+      <span>2 </span>while (count &gt; 0) {
+      <span>3 </span>&nbsp;&nbsp;console.log("Осталось: " + count);
+      <span>4 </span>&nbsp;&nbsp;count--;
+      <span>5 </span>}
+    </div>
+
+    <h4>📦 Вложенные циклы</h4>
+    <p>Один цикл внутри другого. Используется, например, при работе с таблицами или двумерными массивами.</p>
+    <div class="example">
+      <span>1 </span>for (let i = 1; i &lt;= 3; i++) {
+      <span>2 </span>&nbsp;&nbsp;for (let j = 1; j &lt;= 2; j++) {
+      <span>3 </span>&nbsp;&nbsp;&nbsp;&nbsp;console.log("i = " + i + ", j = " + j);
+      <span>4 </span>&nbsp;&nbsp;}
+      <span>5 </span>}
+    </div>
+  </section>
+
+  <section>
+    <h2>Окна alert, prompt, confirm</h2>
+
+    <h3>📢 alert()</h3>
+    <p>Показывает простое сообщение.</p>
+    <div class="example">
+      <span>1 </span>alert("Привет, мир!");
+    </div>
+
+    <h3>🧾 prompt()</h3>
+    <p>Запрашивает ввод от пользователя (возвращает строку).</p>
+    <div class="example">
+      <span>1 </span>let name = prompt("Как тебя зовут?");
+      <span>2 </span>alert("Привет, " + name + "!");
+    </div>
+
+    <h3>✅ confirm()</h3>
+    <p>Показывает диалог с кнопками "OK" и "Отмена". Возвращает true или false.</p>
+    <div class="example">
+      <span>1 </span>let answer = confirm("Ты хочешь продолжить?");
+      <span>2 </span>if (answer) {
+      <span>3 </span>&nbsp;&nbsp;alert("Отлично!");
+      <span>4 </span>} else {
+      <span>5 </span>&nbsp;&nbsp;alert("Жаль 😢");
+      <span>6 </span>}
+    </div>
+
+    <div class="tip">
+      💬 Эти функции часто используются для простого общения с пользователем.
+    </div>
+  </section>
+
+  <a class="back-link" href="../index.html">← Назад на главную</a>
+</main>
+
+<footer>
+  <p>© 2025 Learn-IT | Курс JavaScript для начинающих</p>
+</footer>
+
+</body>
+</html>

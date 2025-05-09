@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Курс Python | Learn-IT</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../courses.css/python.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Python: Основы</h1>
+    <p>Простой и мощный язык программирования</p>
+    <nav>
+      <ul>
+        <li><a href="html.html">HTML</a></li>
+        <li><a href="css.html">CSS</a></li>
+        <li><a href="js.html">JavaScript</a></li>
+        <li><a href="python.html">Python</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section>
+    <h2>Что такое Python?</h2>
+    <p><strong>Python</strong> — это высокоуровневый язык программирования, который отличается:</p>
+    <ul>
+      <li>Простым и понятным синтаксисом</li>
+      <li>Мощными возможностями при минимальном коде</li>
+      <li>Применением в вебе, анализе данных, автоматизации и ИИ</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Как запускать Python-код?</h2>
+    <ol>
+      <li><strong>Интерактивный режим:</strong>
+        <div class="example">
+          <span>1 </span>python3
+          <span>2 </span>>>> print("Привет, мир!")
+        </div>
+      </li>
+      <li><strong>Файлы .py:</strong>
+        <div class="example">
+          <span>1 </span># В файле hello.py
+          <span>2 </span>print("Привет, мир!")
+          <span>3 </span>
+          <span>4 </span># Запуск в терминале:
+          <span>5 </span>python3 hello.py
+        </div>
+      </li>
+    </ol>
+    <div class="tip">
+      📌 <strong>Совет:</strong> Для обучения отлично подходит <a href="https://replit.com/" target="_blank">Replit</a> — не требует установки.
+    </div>
+  </section>
+
+  <section>
+    <h2>Основы синтаксиса</h2>
+    <table>
+      <tr>
+        <th>Концепт</th>
+        <th>Пример</th>
+      </tr>
+      <tr>
+        <td>Переменная</td>
+        <td>name = "Андрей"</td>
+      </tr>
+      <tr>
+        <td>Число</td>
+        <td>age = 25</td>
+      </tr>
+      <tr>
+        <td>Булево значение</td>
+        <td>is_student = True</td>
+      </tr>
+      <tr>
+        <td>Вывод в консоль</td>
+        <td>print("Привет!")</td>
+      </tr>
+      <tr>
+        <td>Сложение</td>
+        <td>sum = 5 + 3</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Переменные и типы данных</h2>
+
+    <h3>📦 Основные типы</h3>
+    <div class="example">
+      <span>1 </span># Целые числа
+      <span>2 </span>age = 25
+      <span>3 </span>
+      <span>4 </span># Дробные числа
+      <span>5 </span>price = 19.99
+      <span>6 </span>
+      <span>7 </span># Строки
+      <span>8 </span>name = "Анна"
+      <span>9 </span>
+      <span>10 </span># Логические значения
+      <span>11 </span>is_active = True
+    </div>
+
+    <h3>📝 Динамическая типизация</h3>
+    <p>Python сам определяет тип переменной:</p>
+    <div class="example">
+      <span>1 </span>x = 10      # Сначала число
+      <span>2 </span>x = "текст" # Теперь строка
+    </div>
+    <div class="tip">
+      💡 В Python не нужно указывать тип переменной — язык делает это автоматически.
+    </div>
+  </section>
+
+  <section>
+    <h2>Условные операторы</h2>
+
+    <h3>🔀 if/elif/else</h3>
+    <div class="example">
+      <span>1 </span>temperature = 23
+      <span>2 </span>
+      <span>3 </span>if temperature > 30:
+      <span>4 </span>    print("Жарко!")
+      <span>5 </span>elif temperature > 20:
+      <span>6 </span>    print("Тепло")
+      <span>7 </span>else:
+      <span>8 </span>    print("Прохладно")
+    </div>
+
+    <h3>🔀 Тернарный оператор</h3>
+    <div class="example">
+      <span>1 </span>age = 18
+      <span>2 </span>status = "Взрослый" if age >= 18 else "Ребёнок"
+      <span>3 </span>print(status)
+    </div>
+  </section>
+
+  <section>
+    <h2>Циклы</h2>
+
+    <h3>🔁 for</h3>
+    <div class="example">
+      <span>1 </span># Перебор списка
+      <span>2 </span>fruits = ["яблоко", "банан", "апельсин"]
+      <span>3 </span>for fruit in fruits:
+      <span>4 </span>    print(fruit)
+      <span>5 </span>
+      <span>6 </span># Диапазон чисел
+      <span>7 </span>for i in range(5):  # 0,1,2,3,4
+      <span>8 </span>    print(i)
+    </div>
+
+    <h3>🔄 while</h3>
+    <div class="example">
+      <span>1 </span>count = 3
+      <span>2 </span>while count > 0:
+      <span>3 </span>    print(f"Осталось: {count}")
+      <span>4 </span>    count -= 1
+      <span>5 </span>print("Старт!")
+    </div>
+  </section>
+
+  <section>
+    <h2>Функции</h2>
+
+    <h3>📌 Простая функция</h3>
+    <div class="example">
+      <span>1 </span>def greet(name):
+      <span>2 </span>    """Приветствует пользователя"""
+      <span>3 </span>    return f"Привет, {name}!"
+      <span>4  </span>
+      <span>5 </span>message = greet("Иван")
+      <span>6 </span>print(message)
+    </div>
+
+    <h3>⚙️ Параметры по умолчанию</h3>
+    <div class="example">
+      <span>1 </span>def power(number, exponent=2):
+      <span>2 </span>    return number ** exponent
+      <span>3 </span>
+      <span>4 </span>print(power(3))    # 9 (3²)
+      <span>5 </span>print(power(3, 3)) # 27 (3³)
+    </div>
+  </section>
+
+  <section>
+    <h2>Работа с пользователем</h2>
+
+    <h3>📢 Вывод данных</h3>
+    <div class="example">
+      <span>1 </span>print("Привет, мир!")
+      <span>2 </span>print("Текущий год:", 2025)
+    </div>
+
+    <h3>📝 Ввод данных</h3>
+    <div class="example">
+      <span>1 </span>name = input("Как вас зовут? ")
+      <span>2 </span>print(f"Привет, {name}!")
+      <span>3 </span>
+      <span>4 </span># Числовой ввод (нужно преобразовать)
+      <span>5 </span>age = int(input("Сколько вам лет? "))
+      <span>6 </span>print(f"Через 5 лет вам будет {age + 5}")
+    </div>
+    <div class="tip">
+      ⚠️ <strong>input()</strong> всегда возвращает строку. Для чисел используйте int() или float().
+    </div>
+  </section>
+
+  <section>
+    <h2>Списки и словари</h2>
+
+    <h3>📌 Списки (массивы)</h3>
+    <div class="example">
+      <span>1 </span>fruits = ["яблоко", "банан", "апельсин"]
+      <span>2 </span>print(fruits[1])  # банан
+      <span>3 </span>
+      <span>4 </span># Добавление элемента
+      <span>5 </span>fruits.append("киви")
+      <span>6 </span>
+      <span>7 </span># Длина списка
+      <span>8 </span>print(len(fruits))  # 4
+    </div>
+
+    <h3>🔍 Словари (ключ-значение)</h3>
+    <div class="example">
+      <span>1 </span>person = {
+      <span>2 </span>    "name": "Анна",
+      <span>3 </span>    "age": 25,
+      <span>4 </span>    "is_student": True
+      <span>5 </span>}
+      <span>6 </span>
+      <span>7 </span>print(person["name"])  # Анна
+      <span>8 </span>person["age"] = 26     # Изменение значения
+    </div>
+  </section>
+
+  <a class="back-link" href="../index.html">← Назад на главную</a>
+</main>
+
+<footer>
+  <p>© 2025 Learn-IT | Курс Python для начинающих</p>
+</footer>
+
+</body>
+</html>

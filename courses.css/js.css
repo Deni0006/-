@@ -1,0 +1,53 @@
+main {
+    padding: 30px;
+  }
+
+  .example {
+    background-color: #f0f0f0;
+    border-left: 4px solid #ffa500;
+    padding: 15px;
+    margin: 20px 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
+
+  .tip {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffcc00;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #ffa500;
+    color: white;
+  }
+
+  .back-link {
+    margin-top: 30px;
+    display: inline-block;
+    color: #cc6600;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  header nav ul li a:hover{
+    color: coral;
+    text-decoration: none;
+  }

@@ -1,0 +1,58 @@
+main {
+    padding: 30px;
+  }
+
+  .example {
+    background-color: #f4f4f4;
+    border-left: 4px solid #004080;
+    padding: 15px;
+    margin: 20px 0;
+    font-family: monospace;
+    white-space: pre-wrap;
+    color: #007fff;
+    font-size: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  ul{
+      margin-left: 28px;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #004080;
+    color: white;
+  }
+
+  .tip {
+    background-color: #e6f7ff;
+    border-left: 4px solid #00aaff;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .back-link {
+    margin-top: 30px;
+    display: inline-block;
+    color: #004080;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  header nav ul li a:hover{
+    color: coral;
+    text-decoration: none;
+  }
